@@ -41,7 +41,10 @@ public class UserServiceImpl implements nl.gettoworktogether.security_with_jwt.s
     public String createUser(User user) {
         String randomString = RandomStringGenerator.generateAlphaNumeric(20);
         user.setApikey(randomString);
+        System.out.println("UserServiceImpl:  " + user);
+
         User newUser = userRepository.save(user);
+        System.out.println("UserServiceImpl:  " + newUser);
         return newUser.getUsername();
     }
 

@@ -31,7 +31,10 @@ public class UserController {
     @PostMapping(value = "")
     public ResponseEntity<Object> createKlant(@RequestBody User user) {
         String newUsername = userService.createUser(user);
-
+        System.out.println("usercontroller:  " + newUsername);
+        System.out.println("usercontroller:  " + user);
+        System.out.println("usercontroller:  " + user.getPassword());
+user.setPassword("jhdjhd");
         URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{username}")
                 .buildAndExpand(newUsername).toUri();
 
@@ -61,8 +64,7 @@ public class UserController {
             String authorityName = (String) fields.get("authority");
             userService.addAuthority(username, authorityName);
             return ResponseEntity.noContent().build();
-        }
-        catch (Exception ex) {
+        } catch (Exception ex) {
             throw new BadRequestException();
         }
     }
