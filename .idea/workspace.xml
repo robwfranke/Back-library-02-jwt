@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="006f30c6-0312-4b99-a7fb-5187c14b423a" name="Default Changelist" comment="Update">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/gettoworktogether/security_with_jwt/config/SpringSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/gettoworktogether/security_with_jwt/config/SpringSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/gettoworktogether/security_with_jwt/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/gettoworktogether/security_with_jwt/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/gettoworktogether/security_with_jwt/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/gettoworktogether/security_with_jwt/service/UserServiceImpl.java" afterDir="false" />
     </list>
@@ -120,7 +122,7 @@
       <workItem from="1619421234904" duration="601000" />
       <workItem from="1619423968263" duration="3748000" />
       <workItem from="1619434025066" duration="596000" />
-      <workItem from="1619435960779" duration="1373000" />
+      <workItem from="1619435960779" duration="5235000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1611225328261</created>

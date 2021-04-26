@@ -7,6 +7,9 @@ import nl.gettoworktogether.security_with_jwt.model.User;
 import nl.gettoworktogether.security_with_jwt.repository.UserRepository;
 import nl.gettoworktogether.security_with_jwt.utils.RandomStringGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
@@ -37,15 +40,27 @@ public class UserServiceImpl implements nl.gettoworktogether.security_with_jwt.s
         return userRepository.existsById(username);
     }
 
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+
+
     @Override
     public String createUser(User user) {
         String randomString = RandomStringGenerator.generateAlphaNumeric(20);
         user.setApikey(randomString);
         System.out.println("UserServiceImpl:  " + user);
 
+
+        System.out.println("UserServiceImpl:  " + user.getUsername());
+        System.out.println("UserServiceImpl:  " + user.getPassword());
+
+        user.setPassword(passwordEncoder().encode(user.getPassword()));
+        System.out.println("UserServiceImpl:  " + user.getPassword());
+        user.setEmail(user.getEmail());
         User newUser = userRepository.save(user);
-        System.out.println("UserServiceImpl:  " + newUser);
-        return newUser.getUsername();
+        return (newUser.getUsername());
     }
 
     @Override

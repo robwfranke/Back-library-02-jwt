@@ -4,7 +4,10 @@ import nl.gettoworktogether.security_with_jwt.exceptions.BadRequestException;
 import nl.gettoworktogether.security_with_jwt.model.User;
 import nl.gettoworktogether.security_with_jwt.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
@@ -18,6 +21,12 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+//    @Bean
+//    public PasswordEncoder passwordEncoder() {
+//        return new BCryptPasswordEncoder();
+//    }
+
+
     @GetMapping(value = "")
     public ResponseEntity<Object> getUsers() {
         return ResponseEntity.ok().body(userService.getUsers());
@@ -28,13 +37,10 @@ public class UserController {
         return ResponseEntity.ok().body(userService.getUser(username));
     }
 
+
     @PostMapping(value = "")
     public ResponseEntity<Object> createKlant(@RequestBody User user) {
         String newUsername = userService.createUser(user);
-        System.out.println("usercontroller:  " + newUsername);
-        System.out.println("usercontroller:  " + user);
-        System.out.println("usercontroller:  " + user.getPassword());
-user.setPassword("jhdjhd");
         URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{username}")
                 .buildAndExpand(newUsername).toUri();
 
