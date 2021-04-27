@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="006f30c6-0312-4b99-a7fb-5187c14b423a" name="Default Changelist" comment="Update">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/gettoworktogether/security_with_jwt/config/SpringSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/gettoworktogether/security_with_jwt/config/SpringSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/gettoworktogether/security_with_jwt/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/gettoworktogether/security_with_jwt/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/gettoworktogether/security_with_jwt/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/gettoworktogether/security_with_jwt/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/gettoworktogether/security_with_jwt/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/gettoworktogether/security_with_jwt/service/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +25,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="ProjectId" id="1iTBKwgtMYyn6yZT9uyaLKCPyzH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -47,11 +48,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\EINDOPDRACHT\Experiment-02\Back-end" />
       <recent name="Z:\Rob\NOVI\SPRINGBOOT\HERHALING" />
       <recent name="$PROJECT_DIR$/src/main/java/nl/gettoworktogether/security_with_jwt" />
       <recent name="$PROJECT_DIR$/src/main/java/nl/gettoworktogether/security_with_jwt/model" />
       <recent name="$PROJECT_DIR$/src/main/java/nl/gettoworktogether/security_with_jwt/service" />
-      <recent name="$PROJECT_DIR$/src/main/java/nl/gettoworktogether/security_with_user_table/controller" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="Z:\Rob\NOVI\SPRINGBOOT\HERHALING\demo-security-with-jwt-stap5\src\main\resources" />
@@ -90,6 +91,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SecurityMain" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="security_with_jwt" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="nl.gettoworktogether.security_with_jwt.SecurityMain" />
@@ -122,7 +134,9 @@
       <workItem from="1619421234904" duration="601000" />
       <workItem from="1619423968263" duration="3748000" />
       <workItem from="1619434025066" duration="596000" />
-      <workItem from="1619435960779" duration="5235000" />
+      <workItem from="1619435960779" duration="6568000" />
+      <workItem from="1619442594096" duration="1376000" />
+      <workItem from="1619443992106" duration="2550000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1611225328261</created>

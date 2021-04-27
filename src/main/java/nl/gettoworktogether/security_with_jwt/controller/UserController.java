@@ -21,11 +21,6 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-//    @Bean
-//    public PasswordEncoder passwordEncoder() {
-//        return new BCryptPasswordEncoder();
-//    }
-
 
     @GetMapping(value = "")
     public ResponseEntity<Object> getUsers() {

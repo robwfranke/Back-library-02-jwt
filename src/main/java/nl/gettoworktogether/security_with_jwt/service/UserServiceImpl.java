@@ -22,8 +22,9 @@ public class UserServiceImpl implements nl.gettoworktogether.security_with_jwt.s
     @Autowired
     private UserRepository userRepository;
 
-//    @Autowired
-//    private AuthorityRepository authorityRepository;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @Override
     public Collection<User> getUsers() {
@@ -40,10 +41,6 @@ public class UserServiceImpl implements nl.gettoworktogether.security_with_jwt.s
         return userRepository.existsById(username);
     }
 
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
 
 
     @Override
@@ -56,12 +53,14 @@ public class UserServiceImpl implements nl.gettoworktogether.security_with_jwt.s
         System.out.println("UserServiceImpl:  " + user.getUsername());
         System.out.println("UserServiceImpl:  " + user.getPassword());
 
-        user.setPassword(passwordEncoder().encode(user.getPassword()));
+
+
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
         System.out.println("UserServiceImpl:  " + user.getPassword());
-        user.setEmail(user.getEmail());
         User newUser = userRepository.save(user);
         return (newUser.getUsername());
     }
+
 
     @Override
     public void deleteUser(String username) {

@@ -2,12 +2,17 @@ package nl.gettoworktogether.security_with_jwt.service;
 
 import nl.gettoworktogether.security_with_jwt.model.Authority;
 import nl.gettoworktogether.security_with_jwt.model.User;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Collection;
 import java.util.Optional;
 import java.util.Set;
 
+
+
 public interface UserService {
+
+
 
     public abstract String createUser(User user);
     public abstract void updateUser(String username, User user);
